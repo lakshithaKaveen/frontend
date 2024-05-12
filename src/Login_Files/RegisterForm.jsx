@@ -19,7 +19,7 @@ function RegisterForm() {
     //Navigate To Home Page
     const navigate = useNavigate();
 
-    const homePath = "/"
+    const homePath = "/frontend/"
 
     const navigateHome = (path) => {
         navigate(path);

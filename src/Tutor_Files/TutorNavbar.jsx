@@ -16,7 +16,7 @@ function TutorNavbar() {
         navigate(path);
     }
 
-    const homePath = "/"
+    const homePath = "/frontend/"
 
     const backHome = (path) => {
         localStorage.removeItem('tutorEmail');
@@ -30,9 +30,9 @@ function TutorNavbar() {
     };
 
     const NavMenus = [
-        { title: "My Courses", path: "/tutor/dashboard" },  //Change navigation according to id number
-        { title: "Publish", path: "/tutor/publish" },
-        { title: "Contact", path: "/tutor/contact" }
+        { title: "My Courses", path: "/frontend/tutor/dashboard" },  //Change navigation according to id number
+        { title: "Publish", path: "/frontend/tutor/publish" },
+        { title: "Contact", path: "/frontend/tutor/contact" }
     ];
 
     return (

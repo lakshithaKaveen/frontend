@@ -11,7 +11,7 @@ function LoginTutor({ isLogged }) {
     
     const navigate = useNavigate();
 
-    const homePath = "/"
+    const homePath = "/frontend/"
 
     const navigateHome = (path) => {
         navigate(path);
@@ -44,7 +44,7 @@ function LoginTutor({ isLogged }) {
                 notification.textContent = "Login Successful. Happy Learning 🎊"
 
                 setTimeout(function() {
-                    navigate("/tutor/dashboard");
+                    navigate("/frontend/tutor/dashboard");
                 }, 1500);
 
             }

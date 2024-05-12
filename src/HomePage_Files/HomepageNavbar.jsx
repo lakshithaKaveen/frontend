@@ -15,7 +15,7 @@ function HomepageNavbar() {
     }
 
     // Login Navigation
-    const loginPath = "/login"
+    const loginPath = "/frontend/login"
 
     const navigateSignup = (path) => {
         navigate(path);
@@ -26,14 +26,18 @@ function HomepageNavbar() {
     };
 
     const NavMenus = [
-        { title: "Home", path: "/" },
-        { title: "About", path: "/about" },
-        { title: "Services", path: "/services" },
-        { title: "Contact", path: "/contact" }
+        { title: "Home", path: "/frontend/" },
+        { title: "About", path: "/frontend/about" },
+        { title: "Services", path: "/frontend/services" },
+        { title: "Contact", path: "/frontend/contact" }
     ];
 
     return (
-        <header className="bg-gray-800 text-white pt-4 pb-2 select-none">
+        <>
+        <div className="bg-yellow-300 text-gray-800 text-center py-1">
+            This is a frontend component only. <a href="https://cepdnaclk.github.io/e19-co226-Online-Learning-Platform/"><u>Click Here</u></a> for full documentation
+        </div>
+        <div className="bg-gray-800 text-white pt-4 pb-2 select-none">
             <nav className="flex justify-between items-center w-[92%] mx-auto">
                 <div>
                     <div className="inline-block mr-2">
@@ -69,7 +73,8 @@ function HomepageNavbar() {
                     </span>
                 </div>
             </nav>
-        </header>
+        </div>
+        </>
     );
 }
 

@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 
 import { useState } from "react";
 import { useEffect } from "react";
@@ -20,32 +19,88 @@ function Homepage() {
         loadCourses();
     }, [])
 
-    const loadCourses = async () => {
+    const loadCourses = () => {
+        const courseData = [
+            {
+                courseID: 1,
+                courseName: "Regression and Classification",
+                category: "Machine Learning",
+                price: 50,
+                buttonText: "View"
+            },
+            {
+                courseID: 2,
+                courseName: "Programming with Python",
+                category: "Programming",
+                price: 10,
+                buttonText: "View"
+            },
+            {
+                courseID: 3,
+                courseName: "History of Sri Lanka",
+                category: "History",
+                price: 18,
+                buttonText: "View"
+            },
+            {
+                courseID: 4,
+                courseName: "Taxation",
+                category: "Law",
+                price: 12,
+                buttonText: "View"
+            },
+            {
+                courseID: 5,
+                courseName: "React Fundamentals",
+                category: "Web Development",
+                price: 35,
+                buttonText: "View"
+            },
+            {
+                courseID: 6,
+                courseName: "Biology 101",
+                category: "Science",
+                price: 20,
+                buttonText: "View"
+            },
+            {
+                courseID: 7,
+                courseName: "English Literature",
+                category: "Literature",
+                price: 10,
+                buttonText: "View"
+            },
+            {
+                courseID: 8,
+                courseName: "Future of AI",
+                category: "Artificial Intelligence",
+                price: 40,
+                buttonText: "View"
+            },
+            {
+                courseID: 9,
+                courseName: "Financial Markets",
+                category: "Finance",
+                price: 30,
+                buttonText: "View"
+            },
+        ];
 
-        try {
-            const listOfCourses = await axios.get("http://localhost:9081/course/getcourses");
+        const mappedCourses = courseData.map((course) => {
+            return {
+                courseID: course.courseID,
+                courseName: course.courseName,
+                category: course.category,
+                price: course.price,
+                buttonText: course.buttonText
+            };
+        });
 
-            const mappedCourses = listOfCourses.data.map((course) => {
-                return {
-                    courseID:course.courseId,
-                    courseName: course.courseName,
-                    category: course.courseCategory,
-                    price: course.price,
-                    buttonText: "View",
-                };
-            });
-
-            //console.log(courseList)
-            setCourses(mappedCourses);
-
-        }
-        catch (error) {
-            console.error("Error fetching courses:", error);
-        }
+        setCourses(mappedCourses);
     };
 
     // Navigation of Sign Up button
-    const registerPath = "/register"
+    const registerPath = "/frontend/register"
     const navigate = useNavigate();
 
     const navigateSignup = (path) => {
@@ -53,7 +108,7 @@ function Homepage() {
     }
 
     // Navigation of Tutor Sign Up button
-    const registerTutor = "/regtutor"
+    const registerTutor = "/frontend/regtutor"
 
     const navigateSignupTutor = (path) => {
         navigate(path);

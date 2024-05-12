@@ -16,7 +16,7 @@ function UserNavbar() {
         navigate(path);
     }
 
-    const homePath = "/"
+    const homePath = "/frontend/"
 
     const backHome = (path) => {
         localStorage.removeItem('userEmail');
@@ -29,10 +29,10 @@ function UserNavbar() {
     };
 
     const NavMenus = [
-        { title: "Dashboard", path: "/user/dashboard" },  //Change navigation according to id number
-        { title: "Enroll", path: "/user/allcourses" },
-        { title: "My Profile", path: "/user/profile" },
-        { title: "Contact", path: "/user/contact" }
+        { title: "Dashboard", path: "/frontend/user/dashboard" },  //Change navigation according to id number
+        { title: "Enroll", path: "/frontend/user/allcourses" },
+        { title: "My Profile", path: "/frontend/user/profile" },
+        { title: "Contact", path: "/frontend/user/contact" }
     ];
 
     return (

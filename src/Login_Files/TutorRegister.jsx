@@ -18,7 +18,7 @@ export default function TutorRegister() {
     const navigate = useNavigate();
 
     //Navigate To Home Page
-    const homePath = "/"
+    const homePath = "/frontend/"
 
     const navigateHome = (path) => {
         navigate(path);
