@@ -25,14 +25,14 @@ function Homepage() {
                 courseID: 1,
                 courseName: "Regression and Classification",
                 category: "Machine Learning",
-                price: 50,
+                price: "$ 50",
                 buttonText: "View"
             },
             {
                 courseID: 2,
                 courseName: "Programming with Python",
                 category: "Programming",
-                price: 10,
+                price: "$ 10",
                 buttonText: "View"
             },
             {
