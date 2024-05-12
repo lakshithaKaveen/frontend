@@ -35,7 +35,7 @@ function HomepageNavbar() {
     return (
         <>
         <div className="bg-yellow-300 text-gray-800 text-center py-1">
-            This is a frontend component only. <a href="https://cepdnaclk.github.io/e19-co226-Online-Learning-Platform/"><u>Click Here</u></a> for full documentation
+            This is a frontend component only. <a href="https://cepdnaclk.github.io/e19-co226-Online-Learning-Platform/" target="_blank"><u>Click Here</u></a> for full documentation
         </div>
         <div className="bg-gray-800 text-white pt-4 pb-2 select-none">
             <nav className="flex justify-between items-center w-[92%] mx-auto">
